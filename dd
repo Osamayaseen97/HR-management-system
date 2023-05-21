@@ -1,0 +1,120 @@
+// //('use strict'
+// function getrandomint(min,max)
+// // Employee data
+// const employees = [
+    
+//     {
+        
+//       employeeId: generateEmployeeId(),
+//       fullName: "Ghazi Samer",
+//       department: "Administration",
+//       level: "Senior",
+//       imageUrl: "https://example.com/ghazi.jpg",}
+      
+//     ,
+//     {
+//       employeeId: generateEmployeeId(),
+//       fullName: "Lana Ali",
+//       department: "Finance",
+//       level: "Senior",
+//       imageUrl: "https://example.com/lana.jpg",
+//     },
+//     {
+//       employeeId: generateEmployeeId(),
+//       fullName: "Tamara Ayoub",
+//       department: "Marketing",
+//       level: "Senior",
+//       imageUrl: "https://example.com/tamara.jpg",
+//     },
+//     {
+//       employeeId: generateEmployeeId(),
+//       fullName: "Safi Walid",
+//       department: "Administration",
+//       level: "Mid-Senior",
+//       imageUrl: "https://example.com/safi.jpg",
+//     },
+//     {
+//       employeeId: generateEmployeeId(),
+//       fullName: "Omar Zaid",
+//       department: "Development",
+//       level: "Senior",
+//       imageUrl: "https://example.com/omar.jpg",
+//     },
+//     {
+//       employeeId: generateEmployeeId(),
+//       fullName: "Rana Saleh",
+//       department: "Development",
+//       level: "Junior",
+//       imageUrl: "https://example.com/rana.jpg",
+//     },
+//     {
+//       employeeId: generateEmployeeId(),
+//       fullName: "Hadi Ahmad",
+//       department: "Finance",
+//       level: "Mid-Senior",
+//       imageUrl: "https://example.com/hadi.jpg",
+//     },
+//   ];
+  
+//   // Generate a unique four-digit employee ID
+//   function generateEmployeeId() {
+//     return getrandomint(1000, 9000);
+//   }
+  
+
+// Calculate the salary for each employee
+  function calculateSalary(level) {
+    let min, max;
+    
+    if (level === "Senior") {
+      min = 1500;
+      max = 2000;
+    } else if (level === "Mid-Senior") {
+      min = 1000;
+      max = 1500;
+    } else if (level === "Junior") {
+      min = 500;
+      max = 1000;
+    }
+    
+    const salary = Math.floor(min + Math.random() * (max - min + 1));
+    const netSalary = salary - (salary * 0.075); // Calculate net salary after tax
+    
+    return netSalary;
+  }
+  
+//   // Render employee information on the home page
+//   function renderEmployees() {
+//     const employeeList = document.getElementById("employeeList");
+    
+//     employees.forEach((employee) => {
+//       const employeeName = document.createElement("p");
+//       employeeName.textContent = "Employee name: " + employee.fullName;
+      
+//       const employeeSalary = document.createElement("p");
+//       employeeSalary.textContent = "Employee salary: " + calculateSalary(employee.level);
+      
+//       employeeList.appendChild(employeeName);
+//       employeeList.appendChild(employeeSalary);
+//     });
+//   }
+  
+//   // Call the renderEmployees function to display employee information
+//   renderEmployees();
+// // Render employee information on the home page
+// function renderEmployees() {
+//     const employeeList = document.getElementById("employeeList");
+//     let html = "";
+  
+//     employees.forEach((employee) => {
+//       const employeeName = "Employee name: " + employee.fullName;
+//       const employeeSalary = "Employee salary: " + calculateSalary(employee.level);
+  
+//       html += `<p>${employeeName}</p><p>${employeeSalary}</p>`;
+//     });
+  
+//     employeeList.innerHTML = html;
+//   }
+  
+//   // Call the renderEmployees function to display employee information
+//   renderEmployees();)
